@@ -13,7 +13,7 @@ function DevPage() {
     const [listOfIssues, setListOfIssues] = React.useState([]);
 
     useEffect(() => {
-        Axios.get("http://localhost:5000/getAllTickets")
+        Axios.get("https://dango-issue-tracker.herokuapp.com/getAllTickets")
           .then(response => {
             setListOfIssues(response.data);
           })
@@ -21,7 +21,7 @@ function DevPage() {
 
     function deleteIssueCard(event) {
         console.log(event.target.id);
-        Axios.delete('http://localhost:5000/deleteIssue', {data: {ticketID: event.target.id}});
+        Axios.delete('https://dango-issue-tracker.herokuapp.com/deleteIssue', {data: {ticketID: event.target.id}});
         setListOfIssues(prev => {
             return prev.filter(issue => issue.ticketID !== event.target.id);
         });

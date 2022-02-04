@@ -25,7 +25,7 @@ function UserPage() {
         if(bugName !== "" && bugDesc !== "") {
             console.log("Issue sent to server");
             setAlertShow(true);
-            await Axios.post("http://localhost:5000/createIssue", {ticketID: uuidv4().substring(0, 10), bugName: bugName, bugDesc: bugDesc});
+            await Axios.post("https://dango-issue-tracker.herokuapp.com/createIssue", {ticketID: uuidv4().substring(0, 10), bugName: bugName, bugDesc: bugDesc});
         } else {
             togglePopOver();
             setTimeout(togglePopOver, 2000);
