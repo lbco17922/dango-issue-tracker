@@ -1,4 +1,5 @@
 import React from 'react';
+import Axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
     Card,
@@ -7,17 +8,17 @@ import {
     CardSubtitle,
     CardText,
     Button,
-    Col,
-    Modal,
-    ModalHeader,
-    ModalBody,
-    ModalFooter
+    Col
 } from 'reactstrap';
+import IssueCardModal from './IssueCardModal.jsx';
 
 function IssueCard(props) {
   const [modalState, setModalState] = React.useState(false);
+  const [devNotes, setDevNotes] = React.useState("");
 
   function toggleModal() {
+    Axios.get(`https://dango-issue-tracker.herokuapp.com/getDevNotes?ticketID=${props.ticketID}`)
+      .then(devNotes => setDevNotes(devNotes.data));
     setModalState(prev => !prev);
   }
 
@@ -48,30 +49,16 @@ function IssueCard(props) {
             >
               More Details
             </Button>
-            <Modal
-              isOpen={modalState}
-              scrollable
-              centered
-              size="lg"
-            >
-              <ModalHeader
-                close={
-                <Button
-                  onClick={toggleModal}
-                >
-                X
-                </Button>}
-              >
-                {props.bugName}
-              </ModalHeader>
-              <ModalBody>
-                {props.bugDesc}
-              </ModalBody>
-              <ModalFooter>
-                Ticket ID:
-                {props.ticketID}
-              </ModalFooter>
-            </Modal>
+            <IssueCardModal
+              bugName={props.bugName}
+              bugDesc={props.bugDesc}
+              ticketID={props.ticketID}
+              devNotes={devNotes}
+              modalState={modalState}
+              setModalState={setModalState}
+              toggleModal={toggleModal}
+              setDevNotes={setDevNotes}
+            />
             <Button
             color="success"
             id={props.ticketID}

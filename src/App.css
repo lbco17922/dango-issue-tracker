@@ -11,3 +11,7 @@
 .modal-content {
     height: 50%;
 }
+
+.devNotesTitle {
+    font-style: italic;
+}

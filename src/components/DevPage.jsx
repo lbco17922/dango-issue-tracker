@@ -29,21 +29,21 @@ function DevPage() {
 
     return (
         <div>
-                <CardGroup>
-                    <Container className="mt-5">
-                        <Row xs={1} md={2} lg={4}>
-                            {listOfIssues.map(bug => {
-                                return <IssueCard
-                                    key={bug.ticketID}
-                                    ticketID = {bug.ticketID}
-                                    bugName = {bug.bugName}
-                                    bugDesc = {bug.bugDesc}
-                                    deleteCard = {deleteIssueCard}
-                                />
-                            })}
-                        </Row>
-                    </Container>
-                </CardGroup>
+            <CardGroup>
+                <Container className="mt-5">
+                    <Row xs={1} md={2} lg={4}>
+                        {listOfIssues.map(bug => {
+                            return <IssueCard
+                                key={bug.ticketID}
+                                ticketID = {bug.ticketID}
+                                bugName = {bug.bugName}
+                                bugDesc = {bug.bugDesc}
+                                deleteCard = {deleteIssueCard}
+                            />
+                        })}
+                    </Row>
+                </Container>
+            </CardGroup>
         </div>
     );
 }

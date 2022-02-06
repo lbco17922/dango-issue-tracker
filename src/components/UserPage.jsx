@@ -25,7 +25,7 @@ function UserPage() {
         if(bugName !== "" && bugDesc !== "") {
             console.log("Issue sent to server");
             setAlertShow(true);
-            await Axios.post("https://dango-issue-tracker.herokuapp.com/createIssue", {ticketID: uuidv4().substring(0, 10), bugName: bugName, bugDesc: bugDesc});
+            await Axios.post("https://dango-issue-tracker.herokuapp.com/createIssue", {ticketID: uuidv4().substring(0, 10), bugName: bugName, bugDesc: bugDesc, devNotes: ""});
         } else {
             togglePopOver();
             setTimeout(togglePopOver, 2000);
@@ -53,11 +53,11 @@ function UserPage() {
                         <Input 
                             id="issueTitle"
                             name="title"
-                            placeholder="A title for your current issue...(Limit 24 Characters)"
+                            placeholder="A title for your current issue...(Limit 25 Characters)"
                             bsSize="lg"
                             className="mb-3"
                             onChange={(event) => setBugName(event.target.value)}
-                            maxLength="24"
+                            maxLength="25"
                             required
                             value={bugName}
                         />
