@@ -1,5 +1,6 @@
 # Dango Issue Tracker
 Personal project by Lionel Cheng.
+Hosted on Netlify: https://dango-issue-tracker.netlify.app/
 
 This project acts as an issue tracking page for the fictitious company "Dango."
 
