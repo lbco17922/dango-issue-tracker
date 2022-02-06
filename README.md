@@ -12,6 +12,7 @@ This project was built using the MERN stack (MongoDB, Express.js, React, and Nod
 ## Navigation
 ### User Page
 The user page is the first page you will be greeted with when launching the website. As a user, you can input a title of an issue along with a brief issue description to help the Dango developers better understand. As an example, you could put the title of an issue as "Frame Drops" and the description as "When launching the Calendar app on my DangoPhone, the frames seem to drop significantly! Please fix, Dango team!"
+Feel free to add your own issue to test out the application! These could be for the DangoPhone, DangoPods, or DangoVision!
 ### Developer's Page
 Looking at the top of the page (navigation bar), you have the option to click on the "I'm a developer!" button which allows Dango developers to login (legitimate login authentication system not implemented in this project). Once logged in, the view of the website will change to one that instead displays all submitted issues, each contained in an "issue card." Issue cards have two buttons each: More Details and Complete.
 
