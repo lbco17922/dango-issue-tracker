@@ -19,3 +19,4 @@ Looking at the top of the page (navigation bar), you have the option to click on
 The more details button allows Dango Developers to view the descriptions of an issue more clearly as well as view and update the developer notes associated with said issue.
 ### `Complete`
 The complete button marks an issue as resolved, removing it from view of the developer and deleting it from the issues database.
+NOTE: IF YOU PLAN TO TEST THE APPLICATION please don't remove all issue cards.
