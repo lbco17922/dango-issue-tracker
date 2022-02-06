@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# Dango Issue Tracker
+Personal project by Lionel Cheng.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project acts as an issue tracking page for the fictitious company "Dango."
 
-## Available Scripts
+Users of Dango products can submit their issues and descriptions of them on this page for developers to see.
 
-In the project directory, you can run:
+Developers at Dango can then view all submitted issues and their descriptions. If they wish, they have the option of adding developer notes for specific issues as well as marking issues as completed/resolved.
 
-### `npm start`
+This project was built using the MERN stack (MongoDB, Express.js, React, and Node.js) and was meant as practice in creating fullstack applications that implement CRUD operations (Create, Read, Update, and Delete).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Navigation
+### User Page
+The user page is the first page you will be greeted with when launching the website. As a user, you can input a title of an issue along with a brief issue description to help the Dango developers better understand. As an example, you could put the title of an issue as "Frame Drops" and the description as "When launching the Calendar app on my DangoPhone, the frames seem to drop significantly! Please fix, Dango team!"
+### Developer's Page
+Looking at the top of the page (navigation bar), you have the option to click on the "I'm a developer!" button which allows Dango developers to login (legitimate login authentication system not implemented in this project). Once logged in, the view of the website will change to one that instead displays all submitted issues, each contained in an "issue card." Issue cards have two buttons each: More Details and Complete.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### `More Details`
+The more details button allows Dango Developers to view the descriptions of an issue more clearly as well as view and update the developer notes associated with said issue.
+### `Complete`
+The complete button marks an issue as resolved, removing it from view of the developer and deleting it from the issues database.
